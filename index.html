@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grind Landing</title>
+
+    <!-- Google Fonts: Instrument Serif (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN Script) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors and Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'page-bg': '#FAF7F2',
+                        'page-text': '#2B1810',
+                        'terracotta': '#D4763E'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Instrument Serif"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-page-bg text-page-text font-sans antialiased min-h-screen">
+
+    <!-- Sticky Nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-page-bg/90 backdrop-blur-md border-b border-page-text/10">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-3xl tracking-tight hover:text-terracotta transition-colors">Grind.</a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#about" class="hover:text-terracotta transition-colors">About</a>
+                <a href="#menu" class="hover:text-terracotta transition-colors">Menu</a>
+                <a href="#visit" class="hover:text-terracotta transition-colors">Visit</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="md:hidden p-2 -mr-2 text-page-text hover:text-terracotta transition-colors"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-page-bg border-b border-page-text/10 px-6 py-4 absolute w-full shadow-lg">
+            <div class="flex flex-col gap-4 font-medium text-lg">
+                <a href="#about" class="block py-2 hover:text-terracotta transition-colors"
+                    onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+                <a href="#menu" class="block py-2 hover:text-terracotta transition-colors"
+                    onclick="document.getElementById('mobile-menu').classList.add('hidden')">Menu</a>
+                <a href="#visit" class="block py-2 hover:text-terracotta transition-colors"
+                    onclick="document.getElementById('mobile-menu').classList.add('hidden')">Visit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-6">
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center py-20">
+            <div class="max-w-3xl">
+                <p class="uppercase tracking-widest text-sm font-medium mb-6 text-page-text/70">A coffee shop for people
+                    who care about details.</p>
+                <h1 class="font-serif text-[22vw] md:text-9xl tracking-tight mb-8 leading-none">Grind.</h1>
+                <p class="text-xl md:text-2xl leading-relaxed mb-12 max-w-2xl text-page-text/90">Single-origin coffee.
+                    Considered interiors. Free wifi that actually works.</p>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8">
+                    <a href="#visit"
+                        class="inline-block bg-terracotta text-white rounded-full px-8 py-4 font-medium transition-transform hover:scale-105 duration-300">Find
+                        us</a>
+                    <a href="#menu"
+                        class="inline-block font-medium underline underline-offset-4 decoration-page-text/30 hover:decoration-page-text hover:text-terracotta transition-all duration-300">See
+                        the menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 border-t border-page-text/10">
+            <h2 class="font-serif text-5xl mb-12">Why Grind</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+                <div>
+                    <p class="text-lg leading-relaxed text-page-text/80">
+                        We believe that a truly great coffee shop isn't just about the beans—though ours are exclusively
+                        single-origin and ethically sourced. It's about the environment. Grind was designed from the
+                        ground up to be a haven for designers, writers, and creatives. A place where the aesthetic is
+                        considered, the lighting is just right, and the wifi never drops.
+                    </p>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="text-terracotta mr-4 text-xl leading-none">&bull;</span>
+                            <span class="text-lg text-page-text/90">Ethically sourced, single-origin beans</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-terracotta mr-4 text-xl leading-none">&bull;</span>
+                            <span class="text-lg text-page-text/90">Designed for long working sessions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-terracotta mr-4 text-xl leading-none">&bull;</span>
+                            <span class="text-lg text-page-text/90">Quiet hours, 2pm&ndash;5pm, Mon&ndash;Fri</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-24 border-t border-page-text/10">
+            <h2 class="font-serif text-5xl mb-16 text-center">The Menu</h2>
+
+            <div class="max-w-2xl mx-auto">
+                <div class="space-y-6 mb-12 text-lg">
+                    <div class="flex items-end">
+                        <span class="font-medium text-page-text/90">Espresso</span>
+                        <div class="flex-grow border-b-2 border-dotted border-page-text/20 mx-4 relative top-[-6px]">
+                        </div>
+                        <span class="font-medium text-page-text/90">₹180</span>
+                    </div>
+                    <div class="flex items-end">
+                        <span class="font-medium text-page-text/90">Flat White</span>
+                        <div class="flex-grow border-b-2 border-dotted border-page-text/20 mx-4 relative top-[-6px]">
+                        </div>
+                        <span class="font-medium text-page-text/90">₹220</span>
+                    </div>
+                    <div class="flex items-end">
+                        <span class="font-medium text-page-text/90">Pour Over</span>
+                        <div class="flex-grow border-b-2 border-dotted border-page-text/20 mx-4 relative top-[-6px]">
+                        </div>
+                        <span class="font-medium text-page-text/90">₹280</span>
+                    </div>
+                    <div class="flex items-end">
+                        <span class="font-medium text-page-text/90">Cold Brew</span>
+                        <div class="flex-grow border-b-2 border-dotted border-page-text/20 mx-4 relative top-[-6px]">
+                        </div>
+                        <span class="font-medium text-page-text/90">₹240</span>
+                    </div>
+                    <div class="flex items-end">
+                        <span class="font-medium text-page-text/90">Matcha Latte</span>
+                        <div class="flex-grow border-b-2 border-dotted border-page-text/20 mx-4 relative top-[-6px]">
+                        </div>
+                        <span class="font-medium text-page-text/90">₹260</span>
+                    </div>
+                    <div class="flex items-end">
+                        <span class="font-medium text-page-text/90">Affogato</span>
+                        <div class="flex-grow border-b-2 border-dotted border-page-text/20 mx-4 relative top-[-6px]">
+                        </div>
+                        <span class="font-medium text-page-text/90">₹320</span>
+                    </div>
+                </div>
+
+                <p class="text-center italic text-page-text/60">Prices include GST. Beans change weekly.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="visit" class="py-24 border-t border-page-text/10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+                <div>
+                    <h2 class="font-serif text-5xl mb-8">Come find us</h2>
+                    <p class="text-xl leading-relaxed text-page-text/80 mb-8 max-w-sm">
+                        12, Design District, 2nd Floor.<br>
+                        Open 8am&ndash;8pm, closed Wednesdays.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="#"
+                            class="font-medium underline underline-offset-4 decoration-page-text/30 hover:decoration-page-text hover:text-terracotta transition-all duration-300">Instagram</a>
+                        <a href="#"
+                            class="font-medium underline underline-offset-4 decoration-page-text/30 hover:decoration-page-text hover:text-terracotta transition-all duration-300">Are.na</a>
+                    </div>
+                </div>
+                <div
+                    class="bg-stone-200 aspect-video rounded-2xl flex items-center justify-center text-page-text/40 font-medium text-lg shadow-inner">
+                    Map
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
